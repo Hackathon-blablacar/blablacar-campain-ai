@@ -10,3 +10,11 @@ Peux tu me générer un site en suivant la consigne et en ajoutant la liste de f
 ```
 Utilise un input text plutôt qu'un select pour choisir la ville
 ```
+
+## Project context claude
+
+```
+Situation d'urgence : Marco, responsable de la campagne de sensibilisation BlaBlaCar, a abandonné le projet et supprimé tous les éléments déjà créés. L'entreprise se tourne vers vous, talents de demain, pour sauver cette campagne nationale cruciale.
+
+Votre mission : Concevoir et réaliser une campagne de sensibilisation nationale innovante pour BlaBlaCar, entièrement créée avec l'IA.
+```
