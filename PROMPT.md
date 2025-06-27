@@ -1,9 +1,30 @@
 ## Prompt 
 
 ``` 
-Peux tu me générer un site en suivant la consigne et en ajoutant la liste de fonctionnalité suivante : 
+Créez un site web de calculateur d'empreinte carbone avec les spécifications suivantes :
 
-* Il faut qu'il y a un calculateur de carbone ou tu peux sélectionner une lieux de départ/d'arriver, nombre de passage et ça te génère l'impact carbonne Il doit respecter la charte graphique suivante : #FEO879 #FF82E2 #FED71S #0037B3 #70BAFF Il faut qu'il y est un peu d'humour et un style un peu rétro Utilise tailwind pour le style 
+Fonctionnalités principales :
+- Calculateur de carbone interactif permettant de :
+  - Sélectionner un lieu de départ et d'arrivée
+  - Indiquer le nombre de passagers
+  - Afficher l'impact carbone calculé en temps réel
+
+Design et style :
+- Charte graphique : #FE9879, #FF82E2, #FED715, #0037B3, #70BAFF
+- Style rétro avec des touches d'humour dans les textes
+- Interface moderne mais avec des éléments vintage
+- Utiliser Tailwind CSS pour le styling
+
+Exigences techniques :
+- Interface responsive et intuitive
+- Calculs précis basés sur des données réalistes
+- Animations fluides et interactions engageantes
+- Design accessible et performant
+
+Ton et contenu :
+- Textes avec un ton léger et humoristique
+- Messages encourageants pour sensibiliser à l'écologie
+- Interface conviviale qui dédramatise le sujet environnemental
 ```
 
 
@@ -18,3 +39,4 @@ Situation d'urgence : Marco, responsable de la campagne de sensibilisation BlaBl
 
 Votre mission : Concevoir et réaliser une campagne de sensibilisation nationale innovante pour BlaBlaCar, entièrement créée avec l'IA.
 ```
+
