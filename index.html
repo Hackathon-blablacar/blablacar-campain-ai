@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlaBlaCar - Sauvons la Planète avec Style ! 🚗🌍</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Righteous:wght@400&family=Inter:wght@300;400;600;700&display=swap');
+        
+        .retro-font {
+            font-family: 'Righteous', cursive;
+        }
+        
+        .modern-font {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .retro-shadow {
+            box-shadow: 8px 8px 0px #0037B3;
+        }
+        
+        .retro-border {
+            border: 4px solid #0037B3;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #FED715 0%, #FF82E2 50%, #70BAFF 100%);
+        }
+        
+        .wave-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FED715' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .bounce-in {
+            animation: bounceIn 1s ease-out;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .wiggle {
+            animation: wiggle 2s ease-in-out infinite;
+        }
+        
+        @keyframes wiggle {
+            0%, 7% { transform: rotateZ(0); }
+            15% { transform: rotateZ(-15deg); }
+            20% { transform: rotateZ(10deg); }
+            25% { transform: rotateZ(-10deg); }
+            30% { transform: rotateZ(6deg); }
+            35% { transform: rotateZ(-4deg); }
+            40%, 100% { transform: rotateZ(0); }
+        }
+    </style>
+</head>
+<body class="modern-font bg-white">
+    <!-- Header -->
+    <header class="gradient-bg py-6 px-4">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold">
+                    🚗
+                </div>
+                <h1 class="retro-font text-3xl text-white">BlaBlaCar Écolo</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="text-white hover:text-blue-900 font-semibold transition-colors">Accueil</a>
+                <a href="#calculator" class="text-white hover:text-blue-900 font-semibold transition-colors">Calculateur CO₂</a>
+                <a href="#about" class="text-white hover:text-blue-900 font-semibold transition-colors">Pourquoi ?</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-16 px-4 wave-bg">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="bounce-in">
+                <h2 class="retro-font text-6xl md:text-8xl text-blue-900 mb-6">
+                    SAUVONS LA PLANÈTE
+                    <span class="wiggle inline-block">🌍</span>
+                </h2>
+                <p class="text-2xl md:text-3xl text-pink-500 mb-8 font-bold">
+                    Une personne à la fois, un trajet à la fois !
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="retro-border retro-shadow bg-yellow-300 p-8 rounded-lg">
+                    <h3 class="retro-font text-2xl text-blue-900 mb-4">🌱 Message Écologique</h3>
+                    <p class="text-lg text-gray-800 font-semibold">
+                        "Ensemble, réduisons notre empreinte carbone"
+                    </p>
+                </div>
+                
+                <div class="retro-border retro-shadow bg-pink-300 p-8 rounded-lg">
+                    <h3 class="retro-font text-2xl text-blue-900 mb-4">🚀 Message Innovation</h3>
+                    <p class="text-lg text-gray-800 font-semibold">
+                        "BlaBlaCar, pionnier de la mobilité durable"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="py-16 px-4 bg-blue-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="retro-font text-4xl md:text-5xl text-blue-900 mb-4">
+                    Calculateur CO₂ Rétro 🧮
+                </h2>
+                <p class="text-xl text-gray-700">
+                    Découvrez combien vous pourriez économiser en CO₂ ! 
+                    <span class="text-pink-500 font-bold">Spoiler : c'est énorme ! 😱</span>
+                </p>
+            </div>
+            
+            <div class="retro-border retro-shadow bg-white p-8 rounded-lg">
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label class="block text-lg font-bold text-blue-900 mb-2">
+                            🏠 Ville de départ
+                        </label>
+                        <input type="text" id="departure" 
+                               placeholder="Ex: Paris, Lyon, Marseille..." 
+                               class="w-full p-3 border-2 border-blue-900 rounded-lg text-lg focus:outline-none focus:border-pink-500 transition-colors"
+                               list="cities-list">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-lg font-bold text-blue-900 mb-2">
+                            🎯 Ville d'arrivée
+                        </label>
+                        <input type="text" id="arrival" 
+                               placeholder="Ex: Nice, Toulouse, Bordeaux..." 
+                               class="w-full p-3 border-2 border-blue-900 rounded-lg text-lg focus:outline-none focus:border-pink-500 transition-colors"
+                               list="cities-list">
+                    </div>
+                </div>
+                
+                <datalist id="cities-list">
+                    <option value="Paris">
+                    <option value="Lyon">
+                    <option value="Marseille">
+                    <option value="Toulouse">
+                    <option value="Nice">
+                    <option value="Nantes">
+                    <option value="Strasbourg">
+                    <option value="Montpellier">
+                    <option value="Bordeaux">
+                    <option value="Lille">
+                    <option value="Rennes">
+                    <option value="Reims">
+                    <option value="Le Havre">
+                    <option value="Saint-Étienne">
+                    <option value="Toulon">
+                    <option value="Grenoble">
+                    <option value="Dijon">
+                    <option value="Angers">
+                    <option value="Nîmes">
+                    <option value="Villeurbanne">
+                </datalist>
+                
+                <div class="mb-8">
+                    <label class="block text-lg font-bold text-blue-900 mb-2">
+                        👥 Nombre de passagers (vous inclus)
+                    </label>
+                    <input type="range" id="passengers" min="1" max="5" value="2" 
+                           class="w-full h-3 bg-blue-200 rounded-lg appearance-none cursor-pointer">
+                    <div class="flex justify-between text-sm text-gray-600 mt-2">
+                        <span>1 (solo rider 😢)</span>
+                        <span>3 (équipe sympa 😊)</span>
+                        <span>5 (full house 🎉)</span>
+                    </div>
+                    <div class="text-center mt-2">
+                        <span class="text-2xl font-bold text-pink-500">
+                            <span id="passengerCount">2</span> passagers
+                        </span>
+                    </div>
+                </div>
+                
+                <button id="calculateBtn" 
+                        class="w-full bg-pink-500 hover:bg-pink-600 text-white text-xl font-bold py-4 px-8 rounded-lg retro-shadow transition-all transform hover:scale-105">
+                    🔥 CALCULER L'IMPACT CO₂ ! 🔥
+                </button>
+                
+                <div id="results" class="hidden mt-8 p-6 bg-yellow-100 border-2 border-yellow-400 rounded-lg">
+                    <!-- Results will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 gradient-bg">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="retro-font text-4xl md:text-5xl text-white mb-4">
+                    Pourquoi Choisir BlaBlaCar ? 🤔
+                </h2>
+                <p class="text-xl text-white opacity-90">
+                    Parce que sauver la planète, c'est plus marrant à plusieurs ! 
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white retro-border retro-shadow p-6 rounded-lg text-center">
+                    <div class="text-4xl mb-4">🌱</div>
+                    <h3 class="retro-font text-xl text-blue-900 mb-2">Écolo-Friendly</h3>
+                    <p class="text-gray-700">Moins de voitures = moins de CO₂ = planète heureuse !</p>
+                </div>
+                
+                <div class="bg-white retro-border retro-shadow p-6 rounded-lg text-center">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="retro-font text-xl text-blue-900 mb-2">Économique</h3>
+                    <p class="text-gray-700">Votre portefeuille vous remerciera (et votre banquier aussi) !</p>
+                </div>
+                
+                <div class="bg-white retro-border retro-shadow p-6 rounded-lg text-center">
+                    <div class="text-4xl mb-4">🎉</div>
+                    <h3 class="retro-font text-xl text-blue-900 mb-2">Social</h3>
+                    <p class="text-gray-700">Rencontrez des gens cool et partagez des histoires incroyables !</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-2xl text-white font-bold retro-font">
+                    "La mobilité partagée, c'est l'avenir !" 🚀
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-lg mb-4">
+                🌍 Fait avec ❤️ et de l'IA pour sauver la planète ! 
+            </p>
+            <p class="text-sm opacity-75">
+                © 2025 BlaBlaCar - Hackathon IA Campaign | 100% Généré par Intelligence Artificielle
+            </p>
+            <div class="mt-4">
+                <span class="text-xs bg-yellow-300 text-blue-900 px-3 py-1 rounded-full font-bold">
+                    🤖 POWERED BY AI
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Passenger counter
+        const passengerSlider = document.getElementById('passengers');
+        const passengerCount = document.getElementById('passengerCount');
+        
+        passengerSlider.addEventListener('input', function() {
+            passengerCount.textContent = this.value;
+        });
+        
+        // CO2 Calculator
+        const calculateBtn = document.getElementById('calculateBtn');
+        const resultsDiv = document.getElementById('results');
+        
+        // Distances approximatives entre les villes (en km)
+        const distances = {
+            'paris-lyon': 465,
+            'paris-marseille': 775,
+            'paris-toulouse': 680,
+            'paris-nice': 930,
+            'paris-nantes': 385,
+            'paris-strasbourg': 490,
+            'paris-montpellier': 750,
+            'paris-bordeaux': 580,
+            'paris-lille': 225,
+            'paris-rennes': 350,
+            'paris-reims': 145,
+            'paris-le havre': 200,
+            'paris-saint-etienne': 520,
+            'paris-toulon': 835,
+            'paris-grenoble': 570,
+            'paris-dijon': 315,
+            'paris-angers': 295,
+            'paris-nimes': 715,
+            'paris-villeurbanne': 465,
+            'lyon-marseille': 315,
+            'lyon-toulouse': 535,
+            'lyon-nice': 470,
+            'lyon-nantes': 660,
+            'lyon-strasbourg': 480,
+            'lyon-montpellier': 300,
+            'lyon-bordeaux': 550,
+            'lyon-lille': 690,
+            'lyon-rennes': 730,
+            'lyon-reims': 420,
+            'lyon-le havre': 665,
+            'lyon-saint-etienne': 60,
+            'lyon-toulon': 390,
+            'lyon-grenoble': 105,
+            'lyon-dijon': 190,
+            'lyon-angers': 565,
+            'lyon-nimes': 250,
+            'lyon-villeurbanne': 8,
+            'marseille-toulouse': 405,
+            'marseille-nice': 200,
+            'marseille-nantes': 870,
+            'marseille-strasbourg': 750,
+            'marseille-montpellier': 170,
+            'marseille-bordeaux': 565,
+            'marseille-lille': 970,
+            'marseille-rennes': 940,
+            'marseille-reims': 715,
+            'marseille-le havre': 965,
+            'marseille-saint-etienne': 320,
+            'marseille-toulon': 65,
+            'marseille-grenoble': 280,
+            'marseille-dijon': 485,
+            'marseille-angers': 770,
+            'marseille-nimes': 125,
+            'marseille-villeurbanne': 315,
+            'toulouse-nice': 545,
+            'toulouse-nantes': 540,
+            'toulouse-strasbourg': 850,
+            'toulouse-montpellier': 245,
+            'toulouse-bordeaux': 245,
+            'toulouse-lille': 900,
+            'toulouse-rennes': 610,
+            'toulouse-reims': 780,
+            'toulouse-le havre': 825,
+            'toulouse-saint-etienne': 380,
+            'toulouse-toulon': 450,
+            'toulouse-grenoble': 485,
+            'toulouse-dijon': 610,
+            'toulouse-angers': 445,
+            'toulouse-nimes': 290,
+            'toulouse-villeurbanne': 535,
+            'nice-nantes': 990,
+            'nice-strasbourg': 730,
+            'nice-montpellier': 330,
+            'nice-bordeaux': 685,
+            'nice-lille': 1150,
+            'nice-rennes': 1060,
+            'nice-reims': 895,
+            'nice-le havre': 1145,
+            'nice-saint-etienne': 410,
+            'nice-toulon': 150,
+            'nice-grenoble': 350,
+            'nice-dijon': 565,
+            'nice-angers': 890,
+            'nice-nimes': 280,
+            'nice-villeurbanne': 470,
+            'nantes-strasbourg': 730,
+            'nantes-montpellier': 615,
+            'nantes-bordeaux': 325,
+            'nantes-lille': 610,
+            'nantes-rennes': 110,
+            'nantes-reims': 485,
+            'nantes-le havre': 385,
+            'nantes-saint-etienne': 565,
+            'nantes-toulon': 800,
+            'nantes-grenoble': 665,
+            'nantes-dijon': 525,
+            'nantes-angers': 90,
+            'nantes-nimes': 570,
+            'nantes-villeurbanne': 660,
+            'strasbourg-montpellier': 680,
+            'strasbourg-bordeaux': 810,
+            'strasbourg-lille': 520,
+            'strasbourg-rennes': 800,
+            'strasbourg-reims': 245,
+            'strasbourg-le havre': 665,
+            'strasbourg-saint-etienne': 435,
+            'strasbourg-toulon': 715,
+            'strasbourg-grenoble': 445,
+            'strasbourg-dijon': 215,
+            'strasbourg-angers': 635,
+            'strasbourg-nimes': 555,
+            'strasbourg-villeurbanne': 480,
+            'montpellier-bordeaux': 445,
+            'montpellier-lille': 865,
+            'montpellier-rennes': 735,
+            'montpellier-reims': 590,
+            'montpellier-le havre': 840,
+            'montpellier-saint-etienne': 250,
+            'montpellier-toulon': 190,
+            'montpellier-grenoble': 255,
+            'montpellier-dijon': 460,
+            'montpellier-angers': 640,
+            'montpellier-nimes': 55,
+            'montpellier-villeurbanne': 300,
+            'bordeaux-lille': 735,
+            'bordeaux-rennes': 420,
+            'bordeaux-reims': 655,
+            'bordeaux-le havre': 710,
+            'bordeaux-saint-etienne': 395,
+            'bordeaux-toulon': 520,
+            'bordeaux-grenoble': 500,
+            'bordeaux-dijon': 565,
+            'bordeaux-angers': 235,
+            'bordeaux-nimes': 400,
+            'bordeaux-villeurbanne': 550,
+            'lille-rennes': 520,
+            'lille-reims': 170,
+            'lille-le havre': 425,
+            'lille-saint-etienne': 635,
+            'lille-toulon': 935,
+            'lille-grenoble': 745,
+            'lille-dijon': 485,
+            'lille-angers': 515,
+            'lille-nimes': 830,
+            'lille-villeurbanne': 690
+        };
+        
+        function normalizeCity(city) {
+            return city.toLowerCase()
+                      .trim()
+                      .normalize('NFD')
+                      .replace(/[\u0300-\u036f]/g, '')
+                      .replace(/['']/g, '')
+                      .replace(/-/g, ' ');
+        }
+        
+        function getDistance(city1, city2) {
+            const normalizedCity1 = normalizeCity(city1);
+            const normalizedCity2 = normalizeCity(city2);
+            const key1 = `${normalizedCity1}-${normalizedCity2}`;
+            const key2 = `${normalizedCity2}-${normalizedCity1}`;
+            
+            // Distance par défaut basée sur une estimation si les villes ne sont pas dans notre base
+            const distance = distances[key1] || distances[key2];
+            if (distance) {
+                return distance;
+            }
+            
+            // Si les villes ne sont pas trouvées, on estime une distance moyenne
+            return Math.floor(Math.random() * 400) + 100; // Entre 100 et 500 km
+        }
+        
+        function getRandomFunnyComment() {
+            const comments = [
+                "Bravo ! La Terre vous dit merci ! 🌍💚",
+                "Vous êtes officiellement un héros de l'écologie ! 🦸‍♀️",
+                "Même Greta Thunberg serait fière ! 👏",
+                "Les arbres font la fête en votre honneur ! 🌳🎉",
+                "Vous venez de sauver l'équivalent de plusieurs saumons ! 🐟",
+                "Les ours polaires vous applaudissent ! 🐻‍❄️👏",
+                "Vous êtes plus écolo qu'un smoothie aux épinards ! 🥬",
+                "Même votre grand-mère serait impressionnée ! 👵✨"
+            ];
+            return comments[Math.floor(Math.random() * comments.length)];
+        }
+        
+        calculateBtn.addEventListener('click', function() {
+            const departure = document.getElementById('departure').value.trim();
+            const arrival = document.getElementById('arrival').value.trim();
+            const passengers = parseInt(document.getElementById('passengers').value);
+            
+            if (!departure || !arrival) {
+                alert('Remplissez les deux villes s\'il vous plaît ! 😊');
+                return;
+            }
+            
+            if (normalizeCity(departure) === normalizeCity(arrival)) {
+                resultsDiv.innerHTML = `
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">🤔</div>
+                        <h3 class="retro-font text-2xl text-blue-900 mb-2">Hmm...</h3>
+                        <p class="text-lg">Vous voulez aller de ${departure} à ${arrival} ? 
+                        C'est le voyage le plus écolo de tous : 0 km, 0 CO₂ ! 😄</p>
+                        <p class="text-sm text-gray-600 mt-2">Peut-être choisir une autre destination ? 😉</p>
+                    </div>
+                `;
+                resultsDiv.classList.remove('hidden');
+                return;
+            }
+            
+            const distance = getDistance(departure, arrival);
+            const co2PerKmPerPerson = 0.12; // kg CO2 par km par personne en voiture
+            const co2Solo = distance * co2PerKmPerPerson;
+            const co2Shared = co2Solo / passengers;
+            const co2Saved = co2Solo - co2Shared;
+            const treesEquivalent = Math.round(co2Saved / 21.77); // Un arbre absorbe ~21.77 kg CO2/an
+            const funnyComment = getRandomFunnyComment();
+            
+            resultsDiv.innerHTML = `
+                <div class="text-center">
+                    <div class="text-6xl mb-4">🎉</div>
+                    <h3 class="retro-font text-3xl text-blue-900 mb-4">Résultats Époustouflants !</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-red-100 p-4 rounded-lg border-2 border-red-300">
+                            <h4 class="font-bold text-red-800 mb-2">🚗 Seul dans votre voiture</h4>
+                            <p class="text-2xl text-red-600 font-bold">${co2Solo.toFixed(1)} kg CO₂</p>
+                            <p class="text-sm text-red-700">Distance: ${distance} km</p>
+                            <p class="text-xs text-red-600">${departure} → ${arrival}</p>
+                        </div>
+                        
+                        <div class="bg-green-100 p-4 rounded-lg border-2 border-green-300">
+                            <h4 class="font-bold text-green-800 mb-2">🚗 Avec BlaBlaCar (${passengers} passagers)</h4>
+                            <p class="text-2xl text-green-600 font-bold">${co2Shared.toFixed(1)} kg CO₂</p>
+                            <p class="text-sm text-green-700">Par personne !</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-200 p-6 rounded-lg border-2 border-yellow-400 mb-4">
+                        <h4 class="retro-font text-2xl text-blue-900 mb-2">🌱 Économies réalisées</h4>
+                        <p class="text-3xl text-green-600 font-bold mb-2">${co2Saved.toFixed(1)} kg CO₂ économisés !</p>
+                        <p class="text-lg text-gray-700">C'est comme si vous plantiez <span class="font-bold text-green-600">${treesEquivalent}</span> arbres ! 🌳</p>
+                    </div>
+                    
+                    <div class="bg-pink-100 p-4 rounded-lg border-2 border-pink-300">
+                        <p class="text-lg font-bold text-pink-700">${funnyComment}</p>
+                    </div>
+                    
+                    <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg transition-colors">
+                        🚀 Réserver sur BlaBlaCar !
+                    </button>
+                </div>
+            `;
+            
+            resultsDiv.classList.remove('hidden');
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
