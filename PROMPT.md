@@ -8,6 +8,7 @@ Fonctionnalités principales :
   - Sélectionner un lieu de départ et d'arrivée
   - Indiquer le nombre de passagers
   - Afficher l'impact carbone calculé en temps réel
+  - Mobile first
 
 Design et style :
 - Charte graphique : #FE9879, #FF82E2, #FED715, #0037B3, #70BAFF
